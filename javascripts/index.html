@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <!--<meta charset="UTF-8">--->
+        
+        <!-- title of the webpage (text that appears in the tab) -->
+        <title>J.F.D.I</title>
+        <!-- logo that appears in the tab -->
+        <link rel="shortcut icon" href="images/favicon.ico"/>
+        
+        <!-- scroll bar styling -->
+        <style>
+            /* weightlifting grey rgb(48,52,48) */
+            /* JFDI red color: rgb(229, 20,33) */
+
+            /* width */
+            ::-webkit-scrollbar {
+              width: 15px;
+            }
+
+            /* Track styling*/
+            ::-webkit-scrollbar-track {
+              /* box-shadow: inset 0 0 5px grey;  */
+              border-radius: 10px;
+              /* background-image: linear-gradient(to right, black , grey); */
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            /* Handle, (the thing that you move)*/
+            ::-webkit-scrollbar-thumb {
+              background: rgb(63, 63, 63);
+              border-radius: 10px;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+              background: #34C5BC;
+            }
+            </style>
+        
+        <!-- webpage style sheet -->
+        <style>
+            
+            @font-face{
+                src: url("fonts/Anton-Regular.ttf");
+                font-family: logoText;
+            }
+
+            @font-face{
+                src: url("fonts/PoetsenOne-Regular.ttf");
+                font-family: jfdiMain;
+            }
+
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+            /*messing about with fonts*/
+            /* @font-face{
+                src: url('fonts/SourceCodePro-Bold.ttf');
+                font-family:slogan;
+
+            }
+
+            @font-face{
+                src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+                font-family:contentText; 
+            }*/
+
+            
+
+            
+
+
+            
+            body {
+                margin:0;
+                height: 1000px;
+                /* backdrop-filter: blur(5px); */
+                background-image: url(https://timeretailpartners.com/wp-content/uploads/2021/01/Warehouse-Gym.jpg);
+                /* background-repeat: no-repeat; */
+                background-size: cover;
+                /* background-color:rgba(48, 52, 48, 0.2); */
+                background-attachment: fixed;
+                /*background-position: ;*/
+                background-position-x: 50% ;
+                background-position-y: none;
+                background-repeat: no-repeat;
+                background-size: 120%;
+
+
+            }
+
+            
+            /* .backingImg{
+                background-image: url(https://timeretailpartners.com/wp-content/uploads/2021/01/Warehouse-Gym.jpg); */
+                /* filter: blur(8px);
+                -webkit-filter: blur(8px); */
+                /* background-repeat: no-repeat;
+                background-size: cover; */
+                /* height:100%; */
+                /*height:20vh;*/
+                /*z-index:-1;*/
+            /*}*/
+            
+            
+            .bannerContainer {
+                /* height:112.5px; */
+                height: 16vh;
+                width:100%;
+                position:relative;
+                /* z-index:2; */
+                /* float: right; */
+                top:0;
+                left:0;
+                /* background-color:rgb(48,52,48) ; */
+                /* background-color:rgb(229, 20,33);
+                border-radius: 0px 0px 200px 0px; */
+                
+
+            }
+
+            .banner {
+
+            box-sizing: border-box;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            /* height:75px; */
+            /* height:67%; this was the previouse height*/
+            height:100%;
+            /* background-color: rgb(229, 20,33); */
+            /* background-color: rgb(175, 17, 27); */
+            background-color: rgba(0,0,0,0.5);
+            /* border: solid rgb(175, 17, 27); */
+            border-width: 0px 4px 4px 0px;
+            border-radius: 0px 0px 100px 0px;
+            filter: drop-shadow(2px 2px 2px rgb(0, 0,0));
+            /* box-shadow: inset 0px 0px 10px black;   */
+
+            overflow:hidden;
+            }
+
+
+
+            #logoBackground{
+
+                float:left;
+                top:0;
+                position:fixed;
+                background-color: white;
+                background-color: rgba(255, 255, 255);
+                
+                
+                
+                /* height: 150%; */
+                /* height:112.5px; */
+                /* height:inherit;
+                width:26%; */
+                border: rgba(0, 0, 0) solid;
+                border-radius: 0px 0px 200px 0px;
+                border-width: 0px 0px 0px 0px;
+                padding-left: 5px;
+                filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.75));
+                padding:5px;
+                overflow:hidden;
+                z-index: 1; 
+            }
+            .scrolled{
+                height: 12vh;width:20%;
+            }
+            .notScrolled{
+                height:16vh;width:26%;
+            }
+
+            @keyframes scrolled{
+                from {height:16vh;width:26%;}
+
+                to {height: 12vh;width:20%;}
+            }
+            @keyframes notScrolled{
+                from {height: 12vh;width:20%;}
+
+                to {height:16vh;width:26%;}
+            }
+
+
+
+
+
+
+            .logo {
+                height:100%;
+                width:75%;
+                /* width:50%; */
+                /* filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.50)); */
+            }
+
+            .logoText {
+                position:relative;
+                top:22000px;
+                font-family:logoText;
+
+            }
+            .nav {
+                position:absolute;
+                /* left:30%; */
+                margin-left:10%;
+                margin:0;
+                /* padding:25px 0px 25px 0px; */
+                border-bottom-right-radius: 70px;
+                
+                top:0;
+                background-color: rgb(229, 20,33);
+                height:70%;
+                width:100%;
+                box-sizing: border-box;
+                table-layout: fixed;
+                /* display:inline; */
+                
+
+
+
+
+
+            }
+
+            .navElements {
+                
+                height:200px;
+                width:100%;
+                background-color: white;
+                border: blue 2px solid;
+                color:red;
+                /* border-radius: 10px; */
+                /* padding:10px; */
+                /* box-sizing: border-box; */
+
+            }
+
+            .navElements:hover{
+                background-color: blueviolet;
+            }
+
+            
+            
+            p {
+                float:none;
+                color:black;
+                text-align: center;
+                font-family: logoText;
+                font-size:200%;
+                text-decoration: none;
+            }
+
+            
+
+            
+
+            .contentWrapper{
+                width:60%;
+                /* height: 700px; */
+                margin-left: auto;
+                margin-right: auto;
+                /* border: grey solid 5px; */
+            }
+
+            .content{
+                margin-top:15%;
+                width:100%;
+                /* border: rgb(170, 170, 170) solid 3px; */
+                background-color: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px);
+                /* border-radius:12px; */
+                /* border: rgb(229, 20,33) solid;
+                border-width:0;
+                border-left-width:10px; */
+                border-radius: 4px 12px 100px 4px;
+                height: 700px;
+                font-family: jfdiMain;
+                padding:1%;
+                overflow: hidden;
+                display: inline-block;
+            }
+
+            .contentBanner{
+                height: 100%;
+                width: 3%;
+                background-color:rgb(229, 20,33);
+                backdrop-filter: blur(10px);
+                left:0;
+                top:0;
+
+            }
+
+            .contentHeader {
+                top:0;
+                right:0px;
+                width:30%;
+                /* font-family: contentText; */
+                /*font-family: 'Orbitron', sans-serif;*/
+                font-family: jfdiMain;
+                font-size: 2.5em;
+                font-weight: bold;
+                text-align: right ;
+                letter-spacing: 10px;
+                border: solid grey;
+                border-width: 0;
+                border-bottom-width: 3px;
+                border-right-width: 3px;
+                border-radius: 0 0 10px 0;
+                text-indent: 1%;
+
+                
+            }
+
+            
+
+        </style>
+
+        <!-- navigation bar styling -->
+        <style>
+            ul {
+                position:absolute;
+                list-style-type: none;
+                margin: 0;
+                
+                padding: 15px 0 0 30%;
+                overflow: hidden;
+                background-color: rgb(229, 20,33); 
+                
+                top:0;
+                /* left:30%; */
+                width:100%;  
+                
+                height: 12vh;   
+                box-sizing: border-box;
+                /* border-radius:0 0  100px 0 ; */
+                  
+            }
+        
+            li {
+                float: left;
+                margin-right:90px;
+                
+        }
+        
+            li a {
+                display: block;
+                bottom:0;
+                text-align: center;
+                padding: 0px 15px;
+                /* background-color:rgb(175, 17, 27); */
+                text-decoration: none;
+                border-radius: 10px 10px 10px 10px;
+                /* font-size: 3.75em;
+                font-family: logoText; */
+                /* border:solid white;
+                border-width:0;
+                border-right-width: 5px; */
+                box-sizing: border-box;
+        }
+        
+            li a:hover {
+                background-color: #111;
+            }
+
+            /* navbar element text */
+            .navText{
+                font-size: 3.75em;
+                font-family: logoText;
+                color: white;
+                -webkit-transform:scaleX(1.25); 
+                -moz-transform:scaleX(1.25); 
+                -ms-transform:scaleX(1.25); 
+                -o-transform:scaleX(1.25); 
+                transform:scaleX(1.25); 
+                
+                /* Safari and Chrome */
+                /* Firefox */
+                /* IE 9 */
+                /* Opera */
+                /* W3C */
+            }
+
+            /* Set the size of the div element that contains the map */
+            #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+            }   
+  
+        </style>
+        <script>window.onscroll = function() {onScrollChange(),paralax()};</script>
+        <script src="javascripts/paralaxEffect.js"></script>
+        <script src="javascripts/onscrollEvent.js"></script>
+        
+        <script src="javascripts/googleMaps.js"></script>
+        
+</head>
+
+    <body >
+    
+    <!-- <div class="backingImg"></div> -->
+    
+    <!-- contains the navigation -->
+    <!-- <div class="bannerContainer"> -->
+        <!-- <div class="banner"> -->
+
+            <!-- navigation bar -->
+            <ul>
+                <li><a class="navText" class="active" href="#home">Home</a></li>
+                <!-- <li><a class="navText" href="#news">News</a></li> -->
+                <li><a class="navText" href="#contact">Contact</a></li>
+                <!-- <li><a class="navText" href="#about">About</a></li> -->
+                <li><a class="navText" href="#contact">About Us</a></li>
+              </ul>
+            
+        <!-- </div> -->
+   
+    <!-- </div> -->
+    
+    <!-- JFDI Logo -->
+    <a id="logoBackground" class="notScrolled"href="https://www.youtube.com/watch?v=SRhnpFzIlx0"><img src="images/officialJFDIlogo.png" class="logo"></a>
+
+    <!-- content container -->
+    <div class="contentWrapper">
+        
+        <!-- content box - in this case for "About us" -->
+        <div class="content">
+            <div class="contentHeader">ABOUT US</div>
+
+        </div>
+
+        <div class="content">
+            
+            <div class="contentBanner"></div>
+            <div class="contentHeader">MAPS</div>
+            
+            <!-- <div id="map">
+                
+            </div> -->
+
+            <!-- <script
+                src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+                async
+            ></script> -->
+        </div>
+
+    </div>
+    
+    <!-- this is just hear to act as content to extend the webpage -->
+    <div class="logoText" >hjghgfh</div>
+
+
+
+    
+
+    
+    </body>
+
+
+
+
+</html>
+
