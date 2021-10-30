@@ -86,7 +86,8 @@
                 background-position-x: 50% ;
                 background-position-y: none;
                 background-repeat: no-repeat;
-                background-size: 120%;
+                background-size: 100%;
+                display: block;
 
 
             }
@@ -123,25 +124,42 @@
             .banner {
 
             box-sizing: border-box;
-            position:absolute;
-            top:0;
+            position: relative;
+            
             left:0;
+            height: 10vh;
             width:100%;
-            /* height:75px; */
-            /* height:67%; this was the previouse height*/
-            height:100%;
-            /* background-color: rgb(229, 20,33); */
-            /* background-color: rgb(175, 17, 27); */
-            background-color: rgba(0,0,0,0.5);
-            /* border: solid rgb(175, 17, 27); */
-            border-width: 0px 4px 4px 0px;
-            border-radius: 0px 0px 100px 0px;
-            filter: drop-shadow(2px 2px 2px rgb(0, 0,0));
-            /* box-shadow: inset 0px 0px 10px black;   */
+            background-image:radial-gradient(circle, black, white);
+            
 
             overflow:hidden;
             }
 
+            .logoBanner{
+                height: 350px;
+                width:100%;
+                
+                background-image: radial-gradient(circle,rgba(255, 255, 0, 0),black 90%);
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+
+            .logoBannerText{
+                position: relative;
+                height:50%;
+                margin-left: auto;
+                margin-right:auto;
+                font-size:200px;
+                font-family: jfdiMain;
+                background-color: none;
+               
+                
+  
+  
+  
+            }
 
 
             #logoBackground{
@@ -191,8 +209,15 @@
 
 
             .logo {
+                /* height:100%;
+                width:75%; */
+                
                 height:100%;
-                width:75%;
+                
+                
+                
+                
+                
                 /* width:50%; */
                 /* filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.50)); */
             }
@@ -254,7 +279,15 @@
                 text-decoration: none;
             }
 
-            
+            .contentBackground{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                top:0;
+                
+                /* background-color:rgba(0, 0, 0, 0.95); */
+                background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.95));
+            }
 
             
 
@@ -410,22 +443,32 @@
         <!-- <div class="banner"> -->
 
             <!-- navigation bar -->
-            <ul>
+            <!-- <ul>
                 <li><a class="navText" class="active" href="#home">Home</a></li>
-                <!-- <li><a class="navText" href="#news">News</a></li> -->
+                
                 <li><a class="navText" href="#contact">Contact</a></li>
-                <!-- <li><a class="navText" href="#about">About</a></li> -->
+                
                 <li><a class="navText" href="#contact">About Us</a></li>
-              </ul>
+              </ul> -->
             
         <!-- </div> -->
    
     <!-- </div> -->
     
     <!-- JFDI Logo -->
-    <a id="logoBackground" class="notScrolled"href="https://www.youtube.com/watch?v=SRhnpFzIlx0"><img src="images/officialJFDIlogo.png" class="logo"></a>
+    <!-- <a id="logoBackground" class="notScrolled"href="https://www.youtube.com/watch?v=SRhnpFzIlx0"><img src="images/officialJFDIlogo.png" class="logo"></a> -->
+
+    <div class="logoBanner">
+        <div class="logoBannerText">
+            <img src="images/jfdiBannerLogo2.svg" class="logo">
+            
+        </div>
+        
+    </div>
+    <!-- <div class="banner"></div> -->
 
     <!-- content container -->
+    <div class="contentBackground">
     <div class="contentWrapper">
         
         <!-- content box - in this case for "About us" -->
@@ -435,21 +478,12 @@
         </div>
 
         <div class="content">
+            <div class="contentHeader">something</div>
             
-            <div class="contentBanner"></div>
-            <div class="contentHeader">MAPS</div>
-            
-            <!-- <div id="map">
-                
-            </div> -->
-
-            <!-- <script
-                src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
-                async
-            ></script> -->
         </div>
 
     </div>
+</div>
     
     <!-- this is just hear to act as content to extend the webpage -->
     <div class="logoText" >hjghgfh</div>
