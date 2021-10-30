@@ -1,4 +1,4 @@
-window.onscroll = function() {onScrollChange()};
+// window.onscroll = function() {onScrollChange()};
             
 function onScrollChange(){
 let getSmall = "0.3";
