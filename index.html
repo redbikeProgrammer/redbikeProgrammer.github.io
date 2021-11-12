@@ -131,7 +131,9 @@
             width:100%;
             /* background-image:radial-gradient(circle, black, white); */
             background-color:rgb(229, 20,33);
-
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
     
             
 
@@ -149,13 +151,18 @@
                 
             }
 
+            .verCenter{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
             .logoBannerText{
                 position: relative;
                 height:50%;
                 margin-left: auto;
                 margin-right:auto;
-                font-size:200px;
-                font-family: jfdiMain;
+                
                 background-color: none;
                 /* box-shadow: 0 0 50px rgb(0, 0, 0); */
                 
@@ -274,14 +281,14 @@
 
             
             
-            p {
+            /* p {
                 float:none;
                 color:black;
                 text-align: center;
                 font-family: logoText;
                 font-size:200%;
                 text-decoration: none;
-            }
+            } */
 
             .contentBackground{
                 position: relative;
@@ -290,7 +297,9 @@
                 top:0;
                 
                 /* background-color:rgba(0, 0, 0, 0.95); */
-                background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.95));
+                /* background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.95)); */
+                background-color: rgba(0, 0, 0, 0.95);
+                backdrop-filter:blur(5px)
             }
 
             
@@ -470,7 +479,8 @@
         
     </div>
     <div class="banner">
-        <img height="75%" src="icons/email.svg">JFDI@tsusona.com
+        <div height="100%"><span><img style="padding:none;margin:none;" height="100%"src="icons/email.svg"></span><span>ngjfdngfjngjn</span></div> 
+        <p style="text-align:center;padding-bottom:10px;"><img style="padding:none;margin:none;" height="100%"src="icons/email.svg">hello</p>
     </div>
 
     <!-- content container -->
